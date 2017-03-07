@@ -65,7 +65,6 @@ namespace Retiremate_Integration_Services.Controllers
                     responseData = client.UploadString(serviceUrl, "POST", "{ \"" + methodName + "\": \"" + paramValue + "\" }");
                 }
 
-                //get result
                 var reponseObject = JsonConvert.DeserializeObject<List<ApiResponseProduct>>(responseData);
 
                 //check that we got data from the service call and create data object 
